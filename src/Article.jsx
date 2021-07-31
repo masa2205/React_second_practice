@@ -1,4 +1,5 @@
 import React from "react";
+import LikeButton from "./LikeButton";
 
 const Article = (props) => {
   let publishState = "";
@@ -10,7 +11,6 @@ const Article = (props) => {
   return (
     <div>
       <h2>{props.title}</h2>
-      <p>{props.order}</p>
       <label htmlFor="check">公開状態:</label>
       <input
         type="checkbox"
@@ -18,6 +18,7 @@ const Article = (props) => {
         id="check"
         onClick={() => props.toggle()}
       />
+      <LikeButton count={props.count} />
     </div>
   );
 };
