@@ -1,7 +1,9 @@
-import React from "react";
-import LikeButton from "./LikeButton";
+import React, { useState } from "react";
+// import LikeButton from "./LikeButton";
 
 const Article = (props) => {
+  const [isPublished, togglePublished] = useState(false);
+
   let publishState = "";
   if (props.isPublished) {
     publishState = "公開";
@@ -14,11 +16,11 @@ const Article = (props) => {
       <label htmlFor="check">公開状態:</label>
       <input
         type="checkbox"
-        checked={props.isPublished}
+        checked={isPublished}
         id="check"
-        onClick={() => props.toggle()}
+        onClick={() => togglePublished(!isPublished)}
       />
-      <LikeButton count={props.count} />
+      {/* <LikeButton count={props.count} /> */}
     </div>
   );
 };
