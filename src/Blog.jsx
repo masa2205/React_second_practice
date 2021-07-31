@@ -29,10 +29,7 @@ const Blog = () => {
 
   return (
     <>
-      <Article
-        title="Reactの使い方"
-        // count={this.state.count}
-      />
+      <Article title="Reactの使い方" count={this.state.count} />
       <FooBar.Foo />
       <FooBar.Bar />
       <Hoge />

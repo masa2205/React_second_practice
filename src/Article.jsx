@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import LikeButton from "./LikeButton";
+import LikeButton from "./LikeButton";
 
 const Article = (props) => {
   const [isPublished, togglePublished] = useState(false);
@@ -20,7 +20,7 @@ const Article = (props) => {
         id="check"
         onClick={() => togglePublished(!isPublished)}
       />
-      {/* <LikeButton count={props.count} /> */}
+      <LikeButton />
     </div>
   );
 };
